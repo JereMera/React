@@ -1,20 +1,13 @@
 import './item.css'
 import { Link } from 'react-router-dom'
 
-const Item = ({id, name, img, price }) => {
-    console.log(id)
-
-    const handleClick = (e) => {
-        console.log('hice click en item')
-        e.stopPropagation()
-    }
-
+const Item = ({id, name, img, price}) => {
     return (
-        <article className="CardItem" onClick={handleClick}>
+        <article className="CardItem">
             <header className="Header">
-                <h2 className="ItemHeader">
+                <h3 className="ItemHeader">
                     {name}
-                </h2>
+                </h3>
             </header>
             <picture>
                 <img src={img} alt={name} className="ItemImg"/>
@@ -25,7 +18,7 @@ const Item = ({id, name, img, price }) => {
                 </p>
             </section>           
             <footer className='ItemFooter'>
-               <Link to={`/detail/${id}`}>Ver detalle</Link>
+                <Link to={`/detail/${id}`} className='option'>Ver detalle</Link>
             </footer>
         </article>
     )

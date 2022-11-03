@@ -1,10 +1,10 @@
 .CardItem {
-    width: 150px;
+    width: 100%;
     padding: 30px;
     margin: 30px;
     font-size: 10px;
-    background-color: papayawhip;
-    border: 1px solid #e1e1e1;
+    background-color: #e01515;
+    border: 1px solid #e01515;
     border-radius: 10px;
 }
 
@@ -21,16 +21,16 @@
 }
 
 .Info {
-    font-size: 12px;
+    font-size: 16px;
     display: flex;
     justify-content: space-around;
+    margin-top: 4%;
 }
 
 .ButtonDetail {
     width: auto;
     padding: 12px;
-    font-size: 8px;
-    background: #8C30F5;
+    font-size: 20px;
     border-radius: 8px;
     flex: none;
     display: flex;
@@ -40,16 +40,16 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #FFFFFF;
+    color: white;
     border: none;
     border-style: none;
     cursor: pointer;
     outline: inherit;
+    
 }
 
 .ItemImg {
-    width: 100px;
-    height: 100px;
+    width: 20%;
     object-fit: cover;
     object-position: center;
 }
@@ -57,4 +57,28 @@
 .ItemFooter {
     display: flex;
     justify-content: center;
+    border-radius: 10px;
+    font-size: 17px;
+    
+}
+
+.option{
+    width: auto;
+    padding: 14px;
+    font-size: 15px;
+    background: #cb6308;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
 }

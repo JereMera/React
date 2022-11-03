@@ -1,0 +1,10 @@
+.carrousel{
+    display: flex;
+    justify-content: center;
+
+}
+
+.Modification{
+width: 60%;
+color: #090446;
+}

@@ -2,10 +2,12 @@
     width: 500px;
     padding: 30px;
     margin: 30px;
-    font-size: 10px;
-    background-color: rgb(202, 200, 197);
+    font-size: 16px;
+    background-color: #090446;
     border: 1px solid #e1e1e1;
     border-radius: 10px;
+    font-weight: bolder;
+    color: white;
 }
 
 .ContainerItem {
@@ -18,19 +20,23 @@
 .ItemHeader {
     display: flex;
     justify-content: center;
+    font-weight: bolder;
+
+    
 }
 
-.Info {
-    font-size: 12px;
+.Informacion {
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
+    margin: 10px;
+
 }
 
 .Button {
     width: auto;
     padding: 12px;
     font-size: 100%;
-    background: #3ac3a5;
     border-radius: 8px;
     flex: none;
     display: flex;
@@ -48,8 +54,29 @@
 }
 
 .ItemImg {
-    width: 130px;
-    height: 200px;
+    width: 210px;
+    height: 300px;
     object-fit: cover;
     object-position: center;
+}
+
+.Finalizar{
+    width: auto;
+    padding: 12px;
+    font-size: 100%;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #cb6308;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
 }

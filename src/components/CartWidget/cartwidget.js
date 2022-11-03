@@ -1,14 +1,20 @@
-import React from 'react';
 import './cartwidget.css'
-
+import cart from '../assets/carro.svg'
+import { useContext } from 'react';
+import { CartContext } from '../../Context/cardContext';
+import { useNavigate } from 'react-router-dom'
 
 const CartWidget = () => {
-  return (
-    <div className="CartWidget">
-      <img src='https://www.svgrepo.com/show/80543/shopping-cart-outline.svg' style={{ width: 30 }} alt="cart"/>
-      10
-    </div>
-  );
-};
+  const { totalQuantity } = useContext(CartContext)
 
-export default CartWidget;
+  const navigate = useNavigate()
+
+  return (
+    <button to='/cart' className="CartWidget" onClick={() => navigate('/cart')}>
+      <img src={cart} alt='cart-widget' className='CartImg' />
+      {totalQuantity}
+    </button>
+  );
+}
+
+export default CartWidget

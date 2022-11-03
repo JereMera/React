@@ -1,11 +1,12 @@
-.CartWidget {
+.Button {
     width: auto;
-    padding: 12px;
-    font-size: 8px;
-    background: #cb6308;
-    border-radius: 10px;
+    margin: 5px;
+    padding-top: 12px;
+    font-size: 16px;
+    background-color: #cb6308;
+    border-radius: 8px;
     flex: none;
-    display: flex;
+    display: inline-block;
     order: 1;
     align-self: center;
     flex-grow: 0;
@@ -16,9 +17,4 @@
     border-style: none;
     cursor: pointer;
     outline: inherit;
-    font-size: medium;
-}
-
-.CartImg {
-    margin-right: 9px;
 }
