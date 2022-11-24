@@ -5,6 +5,8 @@ import { NotificationContext } from '../../notification/notificationService'
 import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
 import { db } from '../../services/firebase/index'
 import { useNavigate } from "react-router-dom"
+import Contact from "../CheckOut/contacto/contacto";
+
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -14,15 +16,18 @@ const Checkout = () => {
 
     const navigate = useNavigate()
 
-    const createOrder = async () => {
+    const handleContact = async (nombre, email, telefono ) =>
+    {
+        console.log (nombre,email)
+
         setLoading(true)
 
         try {
             const objOrder = {
                 buyer: {
-                    name: 'Jeremias Jesus Mera',
-                    phone: '3416390700',
-                    mail: 'jeremias@gmail.com'
+                    name: nombre,
+                    phone: telefono,
+                    mail: email
                 },
                 items: cart,
                 total: total
@@ -78,7 +83,9 @@ const Checkout = () => {
             setLoading(false)
         }
 
+    
     }
+
 
     if (loading) {
         return <h1>Se esta generando tu compra...</h1>
@@ -87,7 +94,7 @@ const Checkout = () => {
     return (
         <div>
             <h1 className="title">Checkout</h1>
-            <button className="button" onClick={createOrder}>generar compra</button>
+            <Contact onContact={handleContact}/>
         </div>
     )
 }
